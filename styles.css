@@ -1,0 +1,116 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --blanco:rgba(228,228,228,0.5);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}	
+
+body {
+
+    /* Estilos General*/
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+
+    /* Estilos Fondo */
+    background:url(ImagesBackground/Background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    -webkit-bsckdrop-filter: blur(10px);
+
+}
+body::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+body>* {
+    position: relative;
+    z-index: 2;
+}
+
+.Reproductor {
+    /* Estilos General */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    width: 380px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(228,228,228,0.1);
+}
+
+.Reproductor h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.Reproductor p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+#progreso{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgba(165,165,165,alpha);
+    border-radius: 5px;
+    margin: 32px;
+    cursor: pointer;
+}
+
+#progreso::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(6, 171, 236);
+    border-radius: 50%;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    outline: 4px solid var(--blanco);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+}
+
+.controles button {
+    background: none;
+    border: none;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.1s linear;
+}
+
+.controles .control:hover{
+    transform: scale(1.2)
+}
+
+.controles .iconoControl:hover {
+    transform: scale(1.3);
+}
